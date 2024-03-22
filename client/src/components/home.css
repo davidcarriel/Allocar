@@ -1,0 +1,151 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.my-component {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.car-list {
+  margin-top: 20px;
+}
+
+.car-ul {
+  list-style: none;
+  padding: 0;
+}
+
+.car-item {
+  margin-bottom: 10px;
+}
+
+.car-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.car-info__photo-details {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.car-info:hover {
+  transform: scale(1.02);
+}
+
+.car-info img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.car-info img:hover {
+  transform: scale(1.05);
+}
+
+.car-details,
+.date-input-container {
+  text-align: center;
+}
+
+.car-details h3 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.car-details p {
+  font-size: 17px;
+  margin: 3px 0;
+}
+
+.date-input-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.date-input-container label {
+  font-size: 14px;
+}
+
+.date-input-container input {
+  height: 40px;
+  font-size: 10px;
+  text-align: center;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.date-input-container label,
+.date-input-container input {
+  margin-bottom: 5px;
+}
+
+.car-info button {
+  background-color: #4caf50;
+  width: 150px;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.car-info button:hover {
+  background-color: #45a049;
+}
+
+.my-component a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.my-component a:hover {
+  text-decoration: underline;
+  color: #1d5ca8;
+}
+
+.btn-logout {
+  border: none;
+  display: block;
+  background-color: #101110;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-size: 18px;
+  position: relative;
+  display: block; 
+  margin: 0 auto; 
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+}
