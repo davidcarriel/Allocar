@@ -63,7 +63,7 @@ const Home = () => {
       await axios.post('http://localhost:3000/requests/create', request)
       toast.success('Requisição efetuada com sucesso!');
     } catch (error) {
-      console.error('Erro ao solicitar carro:', error);
+      console.error('Erro ao fazer requisição:', error);
     }
   }
 
@@ -91,13 +91,11 @@ const Home = () => {
       {user ? (
         <div>
           <h2>Bem-vindo de volta, {user.name}!</h2>
-          <button
-            type="submit"
-            className='btn-logout'
-            onClick={getRequisitions}
-          >Suas requisições</button>
+          <button type="submit" className='btn-logout' onClick={getRequisitions}>Suas requisições</button>
+
           <div className="car-list">
             <h3>Carros Disponíveis para Alocação</h3>
+            
             <ul className="car-ul">
               {cars.map((car) => (
                 <li key={car.car_id} className="car-item">
@@ -116,25 +114,18 @@ const Home = () => {
                         <label htmlFor={`start_date_${car.car_id}`}>Início:</label>
                         <input type="date" id={`start_date_${car.car_id}`} name={`start_date_${car.car_id}`} value={startDate} onChange={handleStartDateChange} />
                       </div>
-
                       <div>
                         <label htmlFor={`end_date_${car.car_id}`}>Fim:</label>
                         <input type="date" d={`end_date_${car.car_id}`} name={`end_date_${car.car_id}`} value={endDate} onChange={handleEndDateChange} />
                       </div>
                     </div>
 
-                    <button type="submit" onClick={(e) => requestCar(e, car.car_id)}>
-                      Solicitar
-                    </button>
+                    <button type="submit" onClick={(e) => requestCar(e, car.car_id)}>Solicitar</button>
                   </div>
                 </li>
               ))}
             </ul>
-            <button
-              type="submit"
-              className='btn-logout'
-              onClick={(e) => handleLogout(e)}
-            >SAIR</button>
+            <button type="submit" className='btn-logout' onClick={(e) => handleLogout(e)}>SAIR</button>
           </div>
         </div>
       ) : (

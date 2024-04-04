@@ -82,6 +82,13 @@ input[type="text"] {
   background: none;
 }
 
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="text"]:hover{
+  transition: all 0.2s ease;
+  transform: scale(1.05);
+}
+
 input[type="password"]:focus,
 input[type="email"]:focus {
   border-color: #3ca9e2;
